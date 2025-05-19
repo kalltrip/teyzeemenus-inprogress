@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPTIONS Restro Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <!-- Font Awesome 6 (Latest) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="allmin.css"> -->
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Restaurant Header Section -->
+        <header class="restaurant-info">
+            <h1 class="restaurant-name"></h1>
+            <p class="restaurant-details"></p>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav class="category-nav">
+            <button onclick="filterDishes('north-indian')">North Indian</button>
+            <button onclick="filterDishes('south-indian')">South Indian</button>
+            <button onclick="filterDishes('italian')">Italian</button>
+            <button onclick="filterDishes('chinese')">Chinese</button>
+            <button onclick="filterDishes('all')" style="background-color: #007bff;">Show All</button>
+        </nav>
+
+        <!-- Vegetarian Section -->
+        <section class="menu-section" id="vegetarian">
+            <div id="vegetarian-menu"></div>
+            <!-- Dishes will load dynamically here -->
+        </section>
+
+        <!-- Non-Vegetarian Section -->
+        <section class="menu-section" id="non-vegetarian">
+
+            <div id="nonvegetarian-menu"></div>
+            <!-- Dishes will load dynamically here -->
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <!-- Initial row (before menu expands) -->
+            <div class="footer-container" id="footer-main">
+                <button id="toggle-nav">Menu</button>
+                <button class="placeorder" onclick="shareOnWhatsApp('')" aria-label="Share on WhatsApp">
+                    Send Order
+                </button>
+                <button class="location" onclick="sendLocationOnWhatsApp()" aria-label="Share on WhatsApp">
+                    Send Location
+                </button>
+                <button class="cta-button" onclick="window.location.href='tel:+1234567890'">
+                    Call
+                </button>
+            </div>
+            <span class="footer-text">Teyzee Menus! <a class="link" href="https://www.ariaprohotels.com/qr-code-menu/">-
+                    by AriaProHotels.com</a></span>
+
+            <!-- This part appears when menu is shown -->
+            <div id="menu-container">
+                <div class="menu-toggle-container">
+                    <button id="hide-nav">Hide Menu Sections</button>
+                </div>
+                <div id="menu-nav">
+                    <a href="#vegetarian">Vegetarian</a>
+                    <a href="#jain-vegetarian">Jain-Vegetarian</a>
+                    <a href="#non-vegetarian">Non-Vegetarian</a>
+                    <a href="#keto-friendly">Keto-Friendly</a>
+                    <a href="#vegan">Vegan</a>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    <!-- if browser closed what happen -->
+    <script src="menu.js"></script> <!-- JavaScript File -->
+</body>
+
+</html>

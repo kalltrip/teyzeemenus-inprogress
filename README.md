@@ -1,1 +1,2 @@
-# teyzeemenus-inprogress
+# teyzee-platinum
+teyzee-platinum
